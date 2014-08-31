@@ -2,7 +2,7 @@
 
 clone this project
 
-create and install virtualev
+create and install virtualenv
 
 
 
@@ -10,14 +10,14 @@ create and install virtualev
     
     $ source teneo/bin/activate
     
-    $ pip install -r requreiemtns/base.txt
+    $ pip install -r requirements/base.txt
 
 
 syncdb and migrate
 
     $ ./manage.py syncdb --settings=vtmember.settings.local
      
-    $ ./manage.py migrate --settings=vtmember.settngs.local
+    $ ./manage.py migrate --settings=vtmember.settings.local
 
 
 runserver
