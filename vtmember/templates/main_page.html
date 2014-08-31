@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block ext_title %}
+    | Home    
+{% endblock ext_title %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            Join with Vox Teneno Academy
+        </div>
+        <div class="col-md-6">
+            <a href="{% url 'vtregister_register' %}" class="btn btn-primary">Register</a>
+            <a href="{% url 'vtregister_login' %}" class="btn btn-default">Login</a>
+        </div>
+    </div>
+{% endblock content %}

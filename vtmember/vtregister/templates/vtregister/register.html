@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load bootstrap %}
+
+{% block ext_title %}
+    | Register
+{% endblock ext_title %}
+{% block content %}
+
+    <div class="row">
+        <form action="{% url 'userena_signup' %}" method='post'>
+        {% csrf_token %}
+        {{ form|bootstrap }}
+        <input type="submit" value='Register' class='btn btn-primary'>
+        </form>
+    </div>    
+{% endblock content %}
