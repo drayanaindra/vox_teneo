@@ -1,0 +1,11 @@
+<div class="header">
+    <ul class="nav nav-pills pull-right">
+      {% url 'index' as index %}
+      <li class=""><a href="{{ index }}">Home</a></li>
+      {% url 'userena_signin' as signin %}
+      <li class=""><a href="{{ signin }}">Login</a></li>
+      {% url 'userena_signup' as signup %}
+      <li class=""><a href="{{ signup }}">Register</a></li>
+    </ul>
+    <h3 class="text-muted">Project Member</h3>
+</div>
