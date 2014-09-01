@@ -20,7 +20,11 @@ syncdb and migrate
     $ ./manage.py syncdb --settings=vtmember.settings.local
 
     $ ./manage.py migrate --settings=vtmember.settings.local
+   
 
+compile static file using [compass](http://compass-style.org/)
+
+    $ compass compile static/
 
 runserver
 
