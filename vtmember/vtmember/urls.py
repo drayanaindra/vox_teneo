@@ -6,7 +6,7 @@ from django.views.generic import TemplateView
 admin.autodiscover()
 
 urlpatterns = patterns('',
-    url(r'^admin/', include(admin.site.urls)),
+    url(r'^manage/admin/', include(admin.site.urls)),
     url(r'^accounts/', include('userena.urls')),
     url(r'^', include('vtregister.urls'))
 )
