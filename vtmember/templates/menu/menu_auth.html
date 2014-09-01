@@ -2,8 +2,19 @@
     <ul class="nav nav-pills pull-right">
       {% url 'index' as index %}
       <li class=""><a href="{{ index }}">Home</a></li>
-      {% url 'userena_profile_detail' user.username  as profile %}
-      <li class=""><a href="{{ profile }}">Profile</a></li>
+      <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Profile <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            {% url 'userena_profile_detail' user.username  as profile %}
+            <li class=""><a href="{{ profile }}">Detail</a></li>
+            {% url 'userena_profile_edit' user.username  as edit_profile %}
+            <li class="selected"><a href="{{ edit_profile }}">Edit Profile</a></li>
+            {% url 'userena_password_change' user.username  as edit_password%}
+            <li><a href="{{ edit_password }}">Edit Password</a></li>
+            {% url 'userena_email_change' user.username  as edit_email %}
+            <li><a href="{{ edit_email }}">Edit Email</a></li>
+          </ul>
+      </li>
       {% url 'userena_profile_list'  as member %}
       <li><a href="{{ member }}">Members</a></li>
       <li><a href="{% url 'userena_signout' %}">Sign Out</a></li>
