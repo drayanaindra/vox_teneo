@@ -1,4 +1,4 @@
-## Setup and Instalaton  Project
+## Setup and Instalation  Project
 
 ### Linux/Unix
 
